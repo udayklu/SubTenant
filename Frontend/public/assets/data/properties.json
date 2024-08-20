@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": "Birla house",
+    "Type": "House",
+    "Price": 12000
+  },
+  {
+    "Id": 2,
+    "Name": "Erose Villa",
+    "Type": "House",
+    "Price": 11000
+  },
+  {
+    "Id": 3,
+    "Name": "Royal palace",
+    "Type": "House",
+    "Price": 100000
+  },
+  {
+    "Id": 4,
+    "Name": "plant home",
+    "Type": "Resort",
+    "Price": 4500
+  },
+  {
+    "Id": 5,
+    "Name": "longs house",
+    "Type": "House",
+    "Price": 15000
+  },
+  {
+    "Id": 1,
+    "Name": "serlok house",
+    "Type": "House",
+    "Price": 202000
+  }
+]
