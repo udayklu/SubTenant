@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c6875cca-edbd-4555-8c03-4778860dc25e/resourceGroups/angular-with-webapi/providers/Microsoft.Web/sites/subtenant",
+    "appService.deploySubpath": "Frontend\\dist\\angular-with-webapi"
+}

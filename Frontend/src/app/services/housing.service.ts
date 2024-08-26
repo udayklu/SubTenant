@@ -10,17 +10,21 @@ export class HousingService {
 
   constructor(private http: HttpClient) { }
 
-  getAllproperties() : Observable<IProperty[]>{
-    return this.http.get('assets/data/properties.json').pipe(
+  getAllproperties(sellRent: number) : Observable<IProperty[]>{
+    return this.http.get<IProperty[]>('assets/data/properties.json').pipe(
       map((list)  => {
         const propertiesArray : Array<IProperty> = [];
 
-        for(const id in list as IProperty[]){
-          if(list.hasOwnProperty(id)){
-            console.log(list as IProperty[])
-            propertiesArray.push(JSON.parse(JSON.stringify(list.toString()))[id]);
+        list.forEach((item, index) => {
+          if(list.hasOwnProperty(index) && item.SellRent === sellRent){
+            propertiesArray.push(item);
           }
-        }
+        });
+        // for(const id in list as IProperty[]){
+        //   if(list.hasOwnProperty(id)){
+        //     propertiesArray.push(JSON.parse(JSON.stringify(list.toString()))[id]);
+        //   }
+        // }
         return propertiesArray;
       }) 
     )

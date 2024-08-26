@@ -1,38 +1,50 @@
 [
   {
     "Id": 1,
+    "SellRent": 1,
     "Name": "Birla house",
     "Type": "House",
-    "Price": 12000
+    "Price": 12000,
+    "Image" : "prop-1.jpg"
   },
   {
     "Id": 2,
+    "SellRent": 1,
     "Name": "Erose Villa",
     "Type": "House",
-    "Price": 11000
+    "Price": 11000,
+    "Image" : "prop-2.jpg"
   },
   {
     "Id": 3,
+    "SellRent": 1,
     "Name": "Royal palace",
     "Type": "House",
-    "Price": 100000
+    "Price": 100000,
+    "Image" : "prop-3.jpg"
   },
   {
     "Id": 4,
+    "SellRent": 2,
     "Name": "plant home",
     "Type": "Resort",
-    "Price": 4500
+    "Price": 4500,
+    "Image" : "prop-4.jpg"
   },
   {
     "Id": 5,
+    "SellRent": 1,
     "Name": "longs house",
     "Type": "House",
-    "Price": 15000
+    "Price": 15000,
+    "Image" : "prop-5.jpg"
   },
   {
-    "Id": 1,
+    "Id": 6, 
+    "SellRent": 2,
     "Name": "serlok house",
     "Type": "House",
-    "Price": 202000
+    "Price": 202000,
+    "Image" : ""
   }
 ]

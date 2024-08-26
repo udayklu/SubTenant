@@ -8,20 +8,50 @@ import { PropertyListComponent } from './property/property-list/property-list/pr
 import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
 import { HousingService } from './services/housing.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddPropertyComponent } from './property/add-property/add-property.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserRegisterComponent } from './User/user-register/user-register.component';
+import { UserLoginComponent } from './User/user-login/user-login.component';
+import { UserService } from './services/user.service';
+import { AlertfyService } from './services/alertfy.service';
+
+
+const routes : Routes = [
+  {path: '', component: PropertyListComponent},
+  {path: 'rent-property', component: PropertyListComponent},
+  {path: 'add-property', component: AddPropertyComponent},
+  {path: 'property-detail/:id', component: PropertyDetailComponent},
+  {path: 'user/register', component: UserRegisterComponent},
+  {path: 'user/login', component: UserLoginComponent},
+  {path: '**', component: PropertyListComponent, pathMatch: 'full' }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyCardComponent,
     PropertyListComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddPropertyComponent,
+    PropertyDetailComponent,
+    UserRegisterComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [HousingService],
+  providers: [
+    HousingService,
+    UserService,
+    AlertfyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
