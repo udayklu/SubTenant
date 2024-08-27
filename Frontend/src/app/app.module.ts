@@ -16,6 +16,12 @@ import { UserRegisterComponent } from './User/user-register/user-register.compon
 import { UserLoginComponent } from './User/user-login/user-login.component';
 import { UserService } from './services/user.service';
 import { AlertfyService } from './services/alertfy.service';
+import { AuthService } from './services/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 const routes : Routes = [
@@ -45,12 +51,18 @@ const routes : Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDropdownModule,
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   providers: [
     HousingService,
     UserService,
-    AlertfyService
+    AlertfyService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
