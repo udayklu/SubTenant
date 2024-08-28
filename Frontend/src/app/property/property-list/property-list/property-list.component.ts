@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { HousingService } from '../../../services/housing.service';
-import { IProperty } from '../../IProperty.interface';
+import { IPropertyBase } from '../../../models/IPropertyBase';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class PropertyListComponent implements OnInit {
   private housingService = inject(HousingService)
   private route = inject(ActivatedRoute)
 
-  properties : Array<IProperty> = [];
+  properties : Array<IPropertyBase> = [];
   sellRent = 1;
 
   ngOnInit(): void {

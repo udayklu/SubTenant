@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, tap, toArray } from 'rxjs';
-import { IProperty } from '../property/IProperty.interface';
+import { IProperty } from '../models/IProperty';
 
 @Injectable({
   providedIn: 'root'
